@@ -11,6 +11,7 @@ struct APIImage: View {
     let image: String
 
     var body: some View {
+        
         AsyncImage(url: URL(string: image)) { phase in
             if let image = phase.image {
                 image
