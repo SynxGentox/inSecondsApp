@@ -11,17 +11,57 @@ struct FeedView: View {
     @Bindable var feedVM: FeedVM
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("hello")
-                        .padding(20)
-                    Spacer()
-                }
+            ZStack {
+                Image(systemName: "app.background.dotted")
+                    .resizable()
+                    .scaledToFit()
                 
-                .background(.red)
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(feedVM.opportunity.first?.category ?? "Job")
+                            .fontWeight(.light)
+                            .fontDesign(.serif)
+                            .font(.title2)
+                            .padding([.vertical,.trailing])
+                            .frame(maxWidth: 200, alignment: .leading)
+                        Spacer()
+                        ActionNavigationButton(buttonDisplay: "magnifyingglass", infinite: false, alignLeft: false, id: "search", destination: SearchView())
+                    }
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        VStack(alignment: .trailing) {
+                            ActionButton(buttonDisplay: "heart", infinite: false, alignLeft: false) {
+                                
+                            }
+                            ActionButton(buttonDisplay: "arrowshape.turn.up.right", infinite: false, alignLeft: false) {
+                                
+                            }
+                        }
+                    }
+                    
+                    Divider()
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(feedVM.opportunity.first?.companyName ?? "Company Name")
+                            Text(feedVM.opportunity.first?.status ?? "FundingStatus")
+                        }
+                        Spacer()
+                        Text(feedVM.opportunity.first?.founder ?? "Founde Name")
+                    }
+                    
+                    HStack {
+                        Text(feedVM.opportunity.first?.desc ?? "hello there is no description")
+                        Spacer()
+                        ActionButton(buttonDisplay: "bookmark", infinite: false, alignLeft: false) {
+                            
+                        }
+                    }
+                }
+                .padding(.horizontal)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 Spacer()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .task {
             await feedVM.loadSavedData()
@@ -32,3 +72,4 @@ struct FeedView: View {
 #Preview {
     FeedView(feedVM: FeedVM(oppRepository: OppRepositoryImpl(oppService: OppService())))
 }
+

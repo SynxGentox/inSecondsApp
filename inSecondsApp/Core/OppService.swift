@@ -29,7 +29,7 @@ struct OppService: OppServiceProtocol {
             let response = try decoder.decode(Opportunities.self, from: data)
             return response.opp
         }
-        catch let error as DecodingError {
+        catch _ as DecodingError {
             print("Decoding error:", DataError.decodingError)
             throw DataError.decodingError
         }

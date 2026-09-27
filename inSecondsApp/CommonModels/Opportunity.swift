@@ -15,7 +15,7 @@ struct Opportunities: Codable {
     }
 }
 
-struct Opportunity: Codable, Identifiable {
+struct Opportunity: Codable, Identifiable, Sendable {
     let id: String
     let companyName: String
     let founder: String
