@@ -55,9 +55,7 @@ struct OppService: OppServiceProtocol {
     func fetchLikedIDs() async -> Set<String> {
         
         let rawData = Set(UserDefaults.standard.stringArray(forKey: "savedLikes") ?? [])
-        let savedLikes: Set<String> = Set(rawData)
-        
-        return savedLikes
+        return Set(rawData)
     }
     func saveLikedIDs(id: Set<String>) async {
         UserDefaults.standard.set(Array(id), forKey: "savedLikes")

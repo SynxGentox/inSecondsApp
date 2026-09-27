@@ -18,10 +18,8 @@ final class FeedVM {
     var saveLikes: Set<String> = []
     private let oppRepository: OppRepository
     
-    init(oppRepository: OppRepository) async {
+    init(oppRepository: OppRepository) {
         self.oppRepository = oppRepository
-        await displaySaves()
-        await displayLikes()
     }
     
 // MARK: - Core Data
@@ -58,6 +56,11 @@ final class FeedVM {
     
 // MARK: - Like and Save
 // Initial VM property update
+    func loadSavedData() async {
+        await displaySaves()
+        await displayLikes()
+    }
+    
     private func displaySaves() async {
         self.saveIDs = await oppRepository.fetchSavedIDs()
     }
@@ -65,6 +68,7 @@ final class FeedVM {
     private func displayLikes() async {
         self.saveLikes = await oppRepository.fetchLikedIDs()
     }
+    
     
 // Saving and Updating VM Data
     // Save Feature
@@ -76,7 +80,6 @@ final class FeedVM {
             saveIDs.insert(id)
         }
         await oppRepository.saveIDs(id: saveIDs)
-        await displaySaves()
     }
     
     // Like Feature
@@ -88,7 +91,6 @@ final class FeedVM {
             saveLikes.insert(id)
         }
         await oppRepository.saveLikedIDs(id: saveLikes)
-        await displayLikes()
     }
     
     
