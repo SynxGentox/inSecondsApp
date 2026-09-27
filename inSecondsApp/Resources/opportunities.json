@@ -1,0 +1,94 @@
+{
+  "opportunities": [
+    {
+      "id": "opp_001",
+      "startupName": "inSeconds",
+      "founderName": "Mr. Pratham",
+      "description": "Turning Reels into something more rather than just being BrainRots",
+      "category": "Software",
+      "status": "Active",
+      "imageURL": "https://media.licdn.com/dms/image/v2/D560BAQH2QnordtCFUQ/company-logo_400_400/company-logo_400_400/0/1711707709849?e=1792022400&v=beta&t=WrBXxF5NdiYXO-JKcZJoyZ0RggXNkTLWBhhHwewuDqM"
+    },
+    {
+      "id": "opp_002",
+      "startupName": "NovaGrid",
+      "founderName": "Aarav Mehta",
+      "description": "Building smarter tools that help modern teams automate repetitive workflows.",
+      "category": "Software",
+      "status": "Hiring",
+      "imageURL": "https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+    },
+    {
+      "id": "opp_003",
+      "startupName": "Finora",
+      "founderName": "Riya Sharma",
+      "description": "Making personal finance easier to understand and manage for young professionals.",
+      "category": "Fintech",
+      "status": "Active",
+      "imageURL": "https://images.unsplash.com/photo-1554224155-6726b3ff858f"
+    },
+    {
+      "id": "opp_004",
+      "startupName": "HealthLoop",
+      "founderName": "Kabir Malhotra",
+      "description": "Creating digital tools that help people build healthier everyday habits.",
+      "category": "HealthTech",
+      "status": "Seed",
+      "imageURL": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d"
+    },
+    {
+      "id": "opp_005",
+      "startupName": "PixelForge",
+      "founderName": "Ananya Kapoor",
+      "description": "Helping creative teams collaborate and ship digital products faster.",
+      "category": "Design",
+      "status": "Hiring",
+      "imageURL": "https://images.unsplash.com/photo-1558655146-9f40138edfeb"
+    },
+    {
+      "id": "opp_006",
+      "startupName": "GreenStack",
+      "founderName": "Vihaan Rao",
+      "description": "Building technology to help businesses reduce waste and operate more sustainably.",
+      "category": "ClimateTech",
+      "status": "Active",
+      "imageURL": "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9"
+    },
+    {
+      "id": "opp_007",
+      "startupName": "Learnly",
+      "founderName": "Ishita Verma",
+      "description": "Making professional learning more practical through short, focused experiences.",
+      "category": "EdTech",
+      "status": "Series A",
+      "imageURL": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655"
+    },
+    {
+      "id": "opp_008",
+      "startupName": "RouteWise",
+      "founderName": "Arjun Singh",
+      "description": "Using intelligent planning tools to make logistics faster and more efficient.",
+      "category": "Logistics",
+      "status": "Hiring",
+      "imageURL": "https://images.unsplash.com/photo-1586528116493-da8e6f2c6a17"
+    },
+    {
+      "id": "opp_009",
+      "startupName": "CreatorBase",
+      "founderName": "Meera Joshi",
+      "description": "Giving creators better tools to manage their work, audience and opportunities.",
+      "category": "Creator Economy",
+      "status": "Active",
+      "imageURL": "https://images.unsplash.com/photo-1531058020387-3be344556be6"
+    },
+    {
+      "id": "opp_010",
+      "startupName": "CloudNest",
+      "founderName": "Aditya Nair",
+      "description": "Building simple infrastructure tools for small engineering teams.",
+      "category": "Developer Tools",
+      "status": "Seed",
+      "imageURL": "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+    }
+  ]
+}
