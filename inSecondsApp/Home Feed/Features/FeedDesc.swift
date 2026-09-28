@@ -41,6 +41,7 @@ struct FeedDesc: View {
             }
         }
         .padding(.horizontal, ButtonT.IconPaddingT.medium)
+        .padding(.bottom, ButtonT.IconPaddingT.medium)
         .background {
             Rectangle()
                 .fill(.ultraThinMaterial)

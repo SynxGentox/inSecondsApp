@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Bindable var feedVM: FeedVM
+
+    private var results: [Opportunity] {
+        feedVM.searchFeat(searchText: feedVM.searchText)
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(results) { opp in
+            NavigationLink(value: opp) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(opp.companyName).font(.headline)
+                    Text("\(opp.founder) • \(opp.category)")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
+            }
+        }
+        .navigationTitle("Search")
+        .searchable(text: $feedVM.searchText, prompt: "Name, founder or category")
+        .overlay {
+            if results.isEmpty {
+                ContentUnavailableView.search(text: feedVM.searchText)
+            }
+        }
     }
 }
 
 #Preview {
-    SearchView()
+    NavigationStack {
+        SearchView(feedVM: FeedVM(oppRepository: OppRepositoryImpl(oppService: OppService())))
+    }
 }

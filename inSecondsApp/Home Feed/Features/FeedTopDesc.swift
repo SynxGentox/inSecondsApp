@@ -10,6 +10,7 @@ import SwiftUI
 struct FeedTopDesc: View {
     @Bindable var feedVM: FeedVM
     let category: String?
+    
     var body: some View {
         HStack {
             Text(category ?? "Job")
@@ -21,6 +22,7 @@ struct FeedTopDesc: View {
                 .frame(maxWidth: 200, alignment: .leading)
         }
         .padding(.horizontal, ButtonT.IconPaddingT.medium)
+        .padding(.top, 60)
     }
 }
 

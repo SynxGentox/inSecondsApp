@@ -13,8 +13,8 @@ struct PrimaryButtonStyle: ButtonStyle {
         configuration.label
             .background(
                 configuration.isPressed || isSelected
-                ? GetColor.sysBack.opacity(0.7)
-                : GetColor.primary // static state color
+                ? Color(UIColor.systemBackground)
+                : Color.blue.opacity(0.7) // static state color
             )
             .clipShape(.circle)
         // 2. The Spatial Brightness Bump
@@ -35,8 +35,8 @@ struct ActionButtonStyle: ButtonStyle {
         configuration.label
             .background(
                 configuration.isPressed || isSelected
-                ? GetColor.sysGray.opacity(0.8)
-                : GetColor.sysGray// static state color
+                ? Color.gray.opacity(0.8)
+                : Color.gray// static state color
             )
             .clipShape(.capsule)
         // 2. The Spatial Brightness Bump

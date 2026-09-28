@@ -11,7 +11,7 @@ struct PrimaryStyle: ViewModifier {
     let fontSize: CGFloat
     func body(content: Content) -> some View {
         content
-            .foregroundStyle(GetColor.customBlack)
+            .foregroundStyle(.primary)
             .font(
                 .system(size: fontSize, weight: .semibold, design: .monospaced)
             )
@@ -28,7 +28,7 @@ struct SecondaryStyle: ViewModifier {
     let fontSize: CGFloat
     func body(content: Content) -> some View {
         content
-            .foregroundStyle(GetColor.customBlack)
+            .foregroundStyle(.primary.opacity(0.55))
             .font(
                 .system(size: fontSize, weight: .semibold, design: .rounded)
             )
@@ -46,7 +46,7 @@ struct AmountStyle: ViewModifier {
     let fontSize: CGFloat
     func body(content: Content) -> some View {
         content
-            .foregroundStyle(GetColor.customBlack)
+            .foregroundStyle(.primary)
             .font(
                 .system(size: fontSize, weight: .bold, design: .rounded)
             )
