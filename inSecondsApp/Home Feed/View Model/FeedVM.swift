@@ -92,7 +92,5 @@ final class FeedVM {
         }
         await oppRepository.saveLikedIDs(id: saveLikes)
     }
-    
-    
 }
 
