@@ -27,5 +27,5 @@ struct FeedTopDesc: View {
 }
 
 #Preview {
-    FeedTopDesc(feedVM: FeedVM(oppRepository: OppRepositoryImpl(oppService: OppService())), category: "")
+    FeedTopDesc(feedVM: FeedVM(oppRepository: OppRepositoryImpl(oppService: OppService())), category: "Category")
 }

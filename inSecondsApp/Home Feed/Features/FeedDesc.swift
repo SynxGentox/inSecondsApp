@@ -62,9 +62,9 @@ struct FeedDesc: View {
     FeedDesc(
         feedVM: FeedVM(oppRepository: OppRepositoryImpl(oppService: OppService())),
         id: "",
-        companyName: "",
-        status: "",
-        founder: "",
-        desc: ""
+        companyName: "COname",
+        status: "Active",
+        founder: "FOunder",
+        desc: "nothing"
     )
 }

@@ -30,7 +30,6 @@ struct OppService: OppServiceProtocol {
             return response.opp
         }
         catch _ as DecodingError {
-            print("Decoding error:", DataError.decodingError)
             throw DataError.decodingError
         }
         catch {

@@ -9,7 +9,6 @@ import Foundation
 
 protocol OppRepository {
     func fetchOpp() async throws -> [Opportunity]
-//    func fetchOppDetails() async throws -> Opportunity
     
     func fetchSavedIDs() async -> Set<String>
     func saveIDs(id: Set<String>) async
@@ -33,11 +32,6 @@ final class OppRepositoryImpl: OppRepository {
         
         return try await oppService.fetchData(url: url)
     }
-    /*
-    func fetchOppDetails() async throws -> Opportunity {
-            <#code#>
-    }
-    */
     
     func fetchSavedIDs() async -> Set<String> {
         return await oppService.fetchSavedIDs()
