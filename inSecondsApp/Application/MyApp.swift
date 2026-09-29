@@ -3,7 +3,7 @@ import SwiftUI
 @main struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            FeedView(feedVM: FeedVM(oppRepository: OppRepositoryImpl(oppService: OppService())))
+            ViewController(feedVM: FeedVM(oppRepository: OppRepositoryImpl(oppService: OppService())))
         }
     }
 }

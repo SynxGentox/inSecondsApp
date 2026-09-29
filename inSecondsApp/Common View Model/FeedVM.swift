@@ -22,7 +22,7 @@ final class FeedVM {
         self.oppRepository = oppRepository
     }
     
-// MARK: - Core Data
+// MARK: - Opportunity Data Management
     func fetchOpportunities() async {
         if opportunity.isEmpty {
             appState = DataState.isLoading
@@ -42,7 +42,7 @@ final class FeedVM {
         }
     }
     
-// MARK: - Searching
+// MARK: - Searching 
     func searchFeat(searchText: String) -> [Opportunity] {
         guard !searchText.isEmpty else {
             return opportunity

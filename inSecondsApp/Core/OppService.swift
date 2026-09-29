@@ -18,6 +18,10 @@ protocol OppServiceProtocol {
 struct OppService: OppServiceProtocol {
     // MARK: - Core Data Management
     func fetchData(url: URL?) async throws -> [Opportunity] {
+        
+        // Simulating API latency...
+        try await Task.sleep(for: .milliseconds(500))
+        
         guard let url = url else {
             throw DataError.fileNotFound
         }
@@ -25,12 +29,14 @@ struct OppService: OppServiceProtocol {
             let data = try Data(contentsOf: url)
             
             let decoder = JSONDecoder()
-            
             let response = try decoder.decode(Opportunities.self, from: data)
             return response.opp
         }
-        catch _ as DecodingError {
+        catch is DecodingError {
             throw DataError.decodingError
+        }
+        catch is CancellationError {
+            throw DataError.cancellationError
         }
         catch {
             throw DataError.noData
